@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    border-bottom: 1px solid white;
+}
+
+.logo h1 {
+    font-size: 36px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative; /* Required for the hover effect */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Hover Effect: Underline Animation */
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #ff5733; /* Orange accent color */
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand the underline on hover */
+}
+
+/* Web Development Section Styles */
+.web-development {
+    padding: 50px 20px;
+    text-align: center;
+    flex: 1; /* Push the footer to the bottom */
+}
+
+.web-development h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.web-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.web-item {
+    background-color: #393939;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.web-item:hover {
+    transform: translateY(-10px); /* Move the item up slightly */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Add a subtle shadow */
+}
+
+.web-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.web-item h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.web-item p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Web Project Button Styles */
+.web-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5733; /* Orange accent color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.web-button:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+    transform: translateY(-3px); /* Slightly lift the button */
+}
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid white;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff5733; /* Orange accent color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .web-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
