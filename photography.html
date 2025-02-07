@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSK - Photography</title>
+    <link rel="stylesheet" href="assets/css/photography.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Full Preview">
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>SSK</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Photography Gallery Section -->
+    <section class="photography-gallery">
+        <h2>My Photography</h2>
+        <div class="gallery-grid">
+            <!-- Add your photos here -->
+            <div class="gallery-item">
+                <img src="assets/img/photo1.jpg" alt="Photo 1" onclick="openLightbox('assets/img/photo1.jpg')">
+                <p>Photo 1 Description</p>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/photo2.jpg" alt="Photo 2" onclick="openLightbox('assets/img/photo2.jpg')">
+                <p>Photo 2 Description</p>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/photo3.jpg" alt="Photo 3" onclick="openLightbox('assets/img/photo3.jpg')">
+                <p>Photo 3 Description</p>
+            </div>
+            <!-- Add more photos as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SSK. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Lightbox -->
+    <script>
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'block';
+            lightboxImg.src = imageSrc;
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
